@@ -1,0 +1,10 @@
+Paths in trees and graphs can be represented as sequences of nodes. One simple method is using a {{c1::list or array}} of nodes.	A path could be {'A', 'B', 'D', 'E'} stored in a std::vector<char>.
+Paths can also be represented as a {{c1::list of edges (pairs)}} connecting consecutive nodes.	Example: std::vector<std::pair<char, char>> path = {{'A', 'B'}, {'B', 'D'}, {'D', 'E'}};
+In weighted graphs, each edge has a {{c1::weight}} that can represent cost, distance, or other metrics.	Example: std::vector<std::tuple<char, char, int>> path = {{ {'A','B',2}, {'B','D',3}, {'D','E',4} }};
+In C++, ++i increments {{c1::before}} the value is used, while i++ increments {{c2::after}} the value is used.	For example: ++i: i=6, result=6; i++: i=6, result=5
+In graphs, weights are numerical values assigned to edges that can represent {{c1::cost, distance, time, or capacity}}.	Weighted graphs allow algorithms to consider the "cost" of traveling from one node to another.
+In an unweighted graph, all edges have the same {{c1::cost}} (often 1), while in a weighted graph each edge has a {{c2::distinct numerical weight}}.	This enables shortest path calculations based on actual costs.
+BFS explores nodes {{c1::level by level}}, while DFS explores nodes {{c2::deeply along one path before backtracking}}.	BFS uses a queue and visits neighbors first; DFS uses a stack or recursion and goes deep first.
+BFS typically uses a {{c1::queue}}, while DFS typically uses a {{c2::stack}} or recursion.	This leads to different traversal orders: BFS is level-oriented, DFS dives into branches.
+In unweighted graphs, {{c1::BFS}} guarantees the shortest path, whereas {{c2::DFS}} does not.	BFS is used for shortest path in unweighted graphs; DFS is for exploring paths and detecting cycles.
+Both BFS and DFS have time complexity {{c1::O(V + E)}} and space complexity about {{c2::O(V)}}.	They are linear in terms of the number of vertices (V) and edges (E).

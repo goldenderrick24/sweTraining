@@ -1,0 +1,58 @@
+{{c1::The Google computing environment uses large clusters of commodity PCs that are not ultra-reliable but offer the best performance per ___.}}
+{{c1::In a distributed system, one of the main challenges is ensuring high ___ capacity within a single datacenter.}}
+{{c1::The design of software systems in Google balances simplicity, ___, performance, reliability, generality, and features.}}
+{{c1::Before starting to write code or design documents, it's important to jot down rough ideas and consult with people familiar with building similar systems to evaluate potential ___.}}
+{{c1::For effective system design, it is crucial to think carefully about the system's ___.}}
+{{c1::Protocol Buffers, which are used by Google, allow for self-describing messages and ___ serialization/deserialization for better performance.}}
+{{c1::To make systems more efficient, it's important to choose the ___ solution, whether it's the simplest, highest performing, or easiest to extend.}}
+{{c1::Understanding performance estimation without building the system is an important skill in systems ___.}}
+{{c1::In system design, we often use ___ calculations to quickly estimate how long operations will take.}}
+{{c1::A typical disk seek takes approximately ___ nanoseconds, which affects performance in data retrieval.}}
+{{c1::When sorting 1GB of data, memory bandwidth typically handles 28 GB of data in about ___ seconds.}}
+{{c1::Building a robust infrastructure involves identifying common problems and addressing them in a general way, without trying to satisfy ___ demands from all clients.}}
+{{c1::Latency is an important consideration in designing systems; for low latency, we aim for low average times and also consider the ___ time to ensure smooth user experience.}}
+{{c1::A system that uses multiple data centers needs to handle issues like ___ and disconnected/partitioned operation, which often leads to eventual consistency models.}}
+{{c1::Google systems use multi-threading to increase both ___ and ___ by utilizing multiple cores in machines.}}
+{{c1::Understanding your data access patterns, like how many sequential reads from memory, RPC data volumes, and network bandwidth, helps optimize ___ performance.}}
+{{c1::For designing efficient systems, knowing how much data you're sending and whether you'll saturate the machine’s ___ is critical.}}
+{{c1::To optimize performance, variable-length encoding, compression, and compact in-memory representations are essential due to the scarcity of ___ and network bandwidth.}}
+{{c1::Google’s software engineering philosophy emphasizes code reviews, design reviews, and ___ testing for ensuring quality.}}
+{{c1::When working with large-scale systems, it’s crucial to handle errors gracefully, often by using ___ requests and failover mechanisms to other replicas or data centers.}}
+{{c1::Google has a large shared ___ base, which is essential for reusing code and benefiting from improvements in core libraries.}}
+{{c1::In software development, understanding the ___ of systems and being able to perform back-of-the-envelope calculations is crucial for identifying the most promising design approaches.}}
+{{c1::Google uses a service-based model for software development because it allows for flexibility, easy testing, and enables small teams to accomplish ___ tasks.}}
+{{c1::When designing systems at Google, it is important to plan for ___ and ensure the system can scale by 10X or 20X but still works well with even larger scaling factors.}}
+{{c1::The design of software systems in Google often avoids trying to be all things to all people, instead focusing on solving ___ common needs.}}
+{{c1::A key challenge of multi-site software engineering is overcoming communication barriers such as ___ and time zone differences.}}
+{{c1::The use of ___ tools such as video conferencing, online documentation, and careful interface/project decomposition is vital for coordinating remote teams.}}
+{{c1::At Google, threads are essential for utilizing the full potential of multi-core machines, improving both throughput and ___.}}
+{{c1::Google’s approach to software engineering includes extensive ___ testing, from unit tests for individual modules to larger tests for whole systems.}}
+{{c1::For long-term system growth, it’s important to design for low latency and high ___, which ensures that systems remain responsive under increasing loads.}}
+{{c1::In designing distributed systems, knowing how to manage data access and ___ is critical to ensure performance under high volumes of traffic.}}
+{{c1::Designing for growth requires anticipating how requirements will evolve, ensuring the system works well when scaling ___ or ___ times.}}
+{{c1::In a distributed system, achieving low latency is not only about the average time but also the ___, which can be mitigated through caching and redundancy.}}
+{{c1::Google’s protocol buffers allow for smooth client and server upgrades by letting systems ___ tags they don’t understand, but still pass the information through.}}
+{{c1::Systems must be designed with the ability to perform low-overhead online ___ profiling to diagnose issues like CPU, memory, and lock contention.}}
+{{c1::To ensure system robustness, Google uses monitoring systems that periodically collect key-value pairs from running servers for easy ___ of issues.}}
+{{c1::When designing software systems, it is important to avoid making everything configurable; this might make the system more complex and lead to ___ dependencies.}}
+{{c1::When calculating system performance, it is crucial to know the basic building blocks such as SSTables, protocol buffers, GFS, and ___ systems.}}
+{{c1::Google's approach to infrastructure avoids imagining unlikely potential needs, instead focusing on common and ___ use cases.}}
+{{c1::An important metric for evaluating system performance is measuring how much data can be read sequentially from the network, which is often measured in ___ nanoseconds for 1 MB.}}
+{{c1::When designing distributed systems, it’s essential to plan for high availability by considering replication strategies and the ___ of data.}}
+{{c1::In system design, different approaches like parallelism or redundancy can reduce the tail of ___, improving user experience under load.}}
+{{c1::For robust system behavior, it’s better to give users limited functionality than to return an ___ page when parts of the system are failing.}}
+{{c1::In designing systems that span multiple sites, using a shared source base helps ensure consistency and allows for ___ across teams working on different parts of the system.}}
+{{c1::Understanding how CPUs, memory, and network interfaces interact with your application helps to optimize both the ___ and ___ of system operations.}}
+{{c1::The Google engineering environment prioritizes scalability and performance while handling complex ___ problems like data access, disk seeks, and network bandwidth.}}
+{{c1::Google’s design philosophy emphasizes the ability to test new versions of systems with minimal ___ on other components and services.}}
+{{c1::A critical part of system design at Google is ensuring that all components, such as networking and disk subsystems, are well ___ to minimize downtime.}}
+{{c1::To evaluate the potential performance of a system, it is crucial to conduct microbenchmarks and gather ___ to help inform design decisions.}}
+{{c1::One way to improve the performance of systems is to leverage caching strategies, which help to reduce ___ caused by frequent disk reads or memory accesses.}}
+{{c1::To support large-scale distributed systems, it’s crucial to have tools for fast searching through large ___ bases of source code to facilitate debugging and refactoring.}}
+{{c1::Designing systems with the ability to scale by 100X involves understanding the trade-offs between ___, reliability, and maintainability.}}
+{{c1::Google’s multi-site approach to software engineering aims to build systems that are not only scalable but also ___ by ensuring teams around the world can work together seamlessly.}}
+{{c1::For low-latency systems, it is important to keep in mind how many RPCs and how much data are involved in each ___ to minimize response times.}}
+{{c1::In Google’s engineering environment, distributed systems are designed with a focus on minimizing hardware failures by using multiple ___ and improving fault tolerance.}}
+{{c1::Effective system design takes into account the complexity of maintaining consistent data across multiple ___ centers, which requires careful attention to consistency models.}}
+{{c1::To ensure performance at scale, systems must be designed with careful attention to hardware failures, network latency, and ___ demands from clients.}}
+{{c1::The goal of system design at Google is to create efficient, high-performance systems that meet the needs of users while being ___ and maintainable over time.}}

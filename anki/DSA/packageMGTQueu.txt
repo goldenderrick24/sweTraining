@@ -1,0 +1,33 @@
+
+Q: What does the function `generateNewArray` do?
+A: It generates a lexicographically largest sequence of numbers by selecting the highest values from an array where the corresponding state is '1', and updates the state after each operation.
+
+Q: How does the `generateNewArray` function handle state updates?
+A: It converts the state string into a mutable list and updates the index of the maximum value by setting its state to '0'.
+
+Q: What is the purpose of the `avail_locs` list in the original implementation?
+A: It stores the indices of elements in the array where the state is '1', indicating available locations for selection.
+
+Q: How does the revised function find the maximum value in the array for available indices?
+A: It iterates through the array and checks where the state is '1', keeping track of the index with the maximum value.
+
+Q: How does the function ensure it doesn't attempt to select a value when no valid indices remain?
+A: It checks if no valid indices exist (`if not avail_locs` or `max_idx != -1`) and exits the loop early.
+
+Q: What is the complexity of the `generateNewArray` function in terms of `n` and `m`?
+A: It is O(m * n), where `n` is the length of the array and `m` is the number of operations, because it iterates through the array `m` times to find the maximum value.
+
+Q: What happens when `m` is larger than the number of available indices in the state?
+A: The function stops early once all valid indices are exhausted, appending as many values as possible.
+
+Q: Why was the slicing approach in the original implementation problematic?
+A: Slicing creates new strings for each update, which can lead to inconsistencies in maintaining the state and adds unnecessary computational overhead.
+
+Q: What data structure is used for efficient state updates in the revised implementation?
+A: A list is used instead of a string to allow direct index assignment, making updates more efficient and straightforward.
+
+Q: What is the output for the input `arr = [5, 4, 3, 6]`, `state = "1100"`, and `m = 5`?
+A: The output is [5, 4, 6, 6, 6].
+
+
+

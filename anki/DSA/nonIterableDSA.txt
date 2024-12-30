@@ -1,0 +1,44 @@
+# Creating a text file formatted for Anki cloze style flashcards from the thread information.
+
+anki_flashcards = """
+{{c1::Are Trees and Graphs Iterable?}}
+- Trees and graphs are {{c1::not inherently iterable}} in their raw form.
+- Traversal algorithms are required to iterate through them.
+
+{{c1::Why are Trees not iterable?}}
+- Trees are hierarchical structures, {{c1::not linear}}.
+- Traversal is needed: {{c1::Depth-First Traversal (pre-order, in-order, post-order)}} or {{c1::Breadth-First Traversal (level-order)}}.
+
+{{c1::How to make Trees iterable?}}
+- Implement traversal methods such as pre-order, in-order, or post-order.
+- Example: {{c1::Python __iter__ implementation with generator}}
+
+{{c1::Why are Graphs not iterable?}}
+- Graphs lack linearity; they depend on the graph type (directed, undirected, etc.).
+- Traversal methods are needed: {{c1::Depth-First Search (DFS)}} or {{c1::Breadth-First Search (BFS)}}.
+
+{{c1::How to make Graphs iterable?}}
+- Define traversal algorithms and expose iteration interfaces.
+- Example: {{c1::Python __iter__ method implementing DFS or BFS}}
+
+{{c1::Tree Example Implementation in Python:}}
+```python
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+    def __iter__(self):
+        if self.left:
+            yield from iter(self.left)
+        yield self.value
+        if self.right:
+            yield from iter(self.right)
+
+# Usage:
+root = TreeNode(10)
+root.left = TreeNode(5)
+root.right = TreeNode(15)
+for value in root:
+    print(value)  # Outputs: 5, 10, 15 (in-order)
